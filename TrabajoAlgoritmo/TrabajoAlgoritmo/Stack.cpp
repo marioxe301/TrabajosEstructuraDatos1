@@ -52,3 +52,15 @@ void Stack::imprimir() {
 	std::cout << std::endl;
 	
 }
+
+void Stack::imprimirR(Nodo *nodo) {
+	if (nodo == 0) {
+		return;
+	}
+	else {
+		std::cout << nodo->numero << "\t";
+		imprimirR(nodo = nodo->ant);
+	}
+
+	std::cout << std::endl;
+}

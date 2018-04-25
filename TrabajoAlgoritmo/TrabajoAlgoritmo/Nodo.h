@@ -20,7 +20,7 @@ public:
 	void push(int);
 	void pop();
 	void imprimir();
-	
+	void imprimirR(Nodo *);
 	bool Vacio();
 };
 #endif // !NODO_H
