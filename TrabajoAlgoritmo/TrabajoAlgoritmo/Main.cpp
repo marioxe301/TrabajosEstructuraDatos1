@@ -20,5 +20,10 @@ int main() {
 	pila.pop();
 	pila.imprimirR(pila.Primero);
 
+	pila.pop();
+	pila.pop();
+
+	
+
 	system("pause");
 }
