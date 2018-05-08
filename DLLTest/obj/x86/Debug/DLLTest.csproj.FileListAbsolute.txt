@@ -1,0 +1,7 @@
+C:\Users\Mario Flores JR\Desktop\DLLTest\bin\x86\Debug\DLLTest.exe.config
+C:\Users\Mario Flores JR\Desktop\DLLTest\bin\x86\Debug\DLLTest.exe
+C:\Users\Mario Flores JR\Desktop\DLLTest\bin\x86\Debug\DLLTest.pdb
+C:\Users\Mario Flores JR\Desktop\DLLTest\obj\x86\Debug\DLLTest.csproj.CoreCompileInputs.cache
+C:\Users\Mario Flores JR\Desktop\DLLTest\obj\x86\Debug\DLLTest.exe
+C:\Users\Mario Flores JR\Desktop\DLLTest\obj\x86\Debug\DLLTest.pdb
+C:\Users\Mario Flores JR\Desktop\DLLTest\obj\x86\Debug\DLLTest.csprojResolveAssemblyReference.cache
