@@ -1,23 +1,42 @@
 #include "Header.h"
+#include <iostream>
+#include <fstream>
 
-ProyectMethods::ProyectMethods(char *name, double lat, double lon){
+using namespace std;
+
+ProyectMethods::ProyectMethods(char name[], double lat, double lon){
 	this->name = name;
 	this->lat = lat;
 	this->lon = lon;
 }
 
-void ProyectMethods::Create_Airport() {
+int ProyectMethods::Create_Airport() {
+	ofstream archivoAeropuerto("aeropuertos.txt", ios::app);
+	
+	if (!archivoAeropuerto) {
+		return 1;
+	}
+	
+	char nombre[40];
+	double lat, lon;
 
+	strcpy(nombre, this->name);
+	lat = this->lat;
+	lon = this->lon;
+
+	archivoAeropuerto << nombre << ";" << lat << ";" << lon<<"\n";
+	archivoAeropuerto.close();
+	return 0;
 }
 
-void ProyectMethods::Display_Airports() {
-
-}
-
-void ProyectMethods::Update_Airport() {
-
-}
-
-void ProyectMethods::Delete_Airport() {
-
-}
+//int  ProyectMethods::Display_Airports() {
+//
+//}
+//
+//int  ProyectMethods::Update_Airport() {
+//
+//}
+//
+//int  ProyectMethods::Delete_Airport() {
+//
+//}

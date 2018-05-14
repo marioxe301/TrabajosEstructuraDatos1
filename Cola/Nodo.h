@@ -3,13 +3,18 @@
 
 #define NODO_H
 
-class Nodo {
+class Node {
 public:
-	Nodo();
+	Node();
 
+	Node *getNext();
+	int getNumber();
+	void setNumber(int);
+	void setNext(Node*);
 
 private:
-	Nodo *sig;
+	int number;
+	Node *sig;
 
 };
 

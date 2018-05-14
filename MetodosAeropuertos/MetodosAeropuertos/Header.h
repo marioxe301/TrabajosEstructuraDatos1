@@ -2,11 +2,11 @@
 
 class ProyectMethods {
 public:
-	ProyectMethods(char *, double, double);
-	void Create_Airport();
-	void Update_Airport();
-	void Display_Airports();
-	void Delete_Airport();
+	ProyectMethods(char[], double, double);
+	int Create_Airport();
+	int Update_Airport();
+	int Display_Airports();
+	int Delete_Airport();
 
 private:
 	char *name;
