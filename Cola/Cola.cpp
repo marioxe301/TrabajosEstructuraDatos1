@@ -1,4 +1,5 @@
 #include "Cola.h"
+#include <iostream>
 #define NULLPTR 0
 
 Cola::Cola(): Top(NULLPTR),End(NULLPTR)
@@ -9,23 +10,18 @@ int Cola::Push(int number) {
 		Node *newN = new Node;
 		newN->setNumber(number);
 		Top = End = newN;
+		return 0;
 	}
-	else {
-		if (Lenght() == 1) {
-			Node *newN = new Node;
-			newN->setNumber(number);
-			End->setNext(newN);
-			Top = newN;
-		}
-		else
+	else
 		{
 			Node *newN = new Node;
 			newN->setNumber(number);
 			Top->setNext(newN);
 			Top = newN;
+			return 0;
 		}
 	}
-}
+
 
 bool Cola::isEmpty() {
 	if (Top == NULLPTR) {
@@ -45,4 +41,21 @@ int Cola::Lenght() {
 		i++;
 	}
 	return i;
+}
+
+int Cola::Pull() {
+	Node *tmp = End->getNext();
+	delete End;
+	End = tmp;
+	return 0;
+}
+
+void Cola::Print() {
+	Node *tmp = End;
+	while (tmp!=NULLPTR)
+	{
+		std::cout << tmp->getNumber() << "\t";
+		tmp = tmp->getNext();
+	}
+	std::cout << std::endl;
 }

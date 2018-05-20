@@ -46,6 +46,7 @@ void Arbol::Imprimir() {
 	while (tmp!=0)
 	{
 		std::cout <<"Peso: "<< tmp->peso<<"\t";
+		tmp = tmp->sig;
 	}
 	std::cout << "\n";
 }

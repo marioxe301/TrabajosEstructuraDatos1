@@ -4,7 +4,7 @@
 
 using namespace std;
 
-ProyectMethods::ProyectMethods(char name[], double lat, double lon){
+ProyectMethods::ProyectMethods(char *name, double lat, double lon){
 	this->name = name;
 	this->lat = lat;
 	this->lon = lon;
@@ -17,7 +17,7 @@ int ProyectMethods::Create_Airport() {
 		return 1;
 	}
 	
-	char nombre[40];
+	char nombre[20];
 	double lat, lon;
 
 	strcpy(nombre, this->name);
