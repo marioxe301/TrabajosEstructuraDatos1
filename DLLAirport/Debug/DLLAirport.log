@@ -1,2 +1,6 @@
-﻿  DLLAirport.cpp
+﻿  stdafx.cpp
+  DLLAirport.cpp
+  dllmain.cpp
+  Generando código...
+     Creando biblioteca C:\Users\Mario Flores JR\Documents\TrabajosEstructuraDatos1\TrabajosEstructuraDatos1\DLLAirport\Debug\DLLAirport.lib y objeto C:\Users\Mario Flores JR\Documents\TrabajosEstructuraDatos1\TrabajosEstructuraDatos1\DLLAirport\Debug\DLLAirport.exp
   DLLAirport.vcxproj -> C:\Users\Mario Flores JR\Documents\TrabajosEstructuraDatos1\TrabajosEstructuraDatos1\DLLAirport\Debug\DLLAirport.dll

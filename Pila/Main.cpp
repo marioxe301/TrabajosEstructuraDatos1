@@ -11,6 +11,7 @@ int main() {
 
  	Stack *result = ++mainS;
 
+	result->Print();
 	_getch();
 
 	return 0;

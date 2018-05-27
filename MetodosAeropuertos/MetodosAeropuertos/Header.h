@@ -1,17 +1,13 @@
 #pragma once
+#include <string>
 
 class ProyectMethods {
 public:
-	ProyectMethods(char *, double, double);
-	int Create_Airport();
-	int Update_Airport();
-	int Display_Airports();
-	int Delete_Airport();
-	bool Exist_Airport();
+	ProyectMethods();
+	void Create_Airport(const char *,double,double);
+	void Read_Airport(char*,int);
+	int Lenght_Arch();
+	
+	
 
-
-private:
-	char *name;
-	double lat;
-	double lon;
 };
