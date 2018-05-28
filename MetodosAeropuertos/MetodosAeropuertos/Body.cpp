@@ -33,7 +33,7 @@ void ProyectMethods::Create_Airport(const char*name, double lat, double lon) {
 
 	strcpy_s(buff, sizeof buffer, buffer.c_str());
 	
-	
+	ArchivoAeropuertos.close();
 	
 }
 
@@ -45,9 +45,38 @@ int ProyectMethods::Lenght_Arch() {
 	while (getline(ArchivoAeropuertos,line)) {
 		i++;
 	}
+	ArchivoAeropuertos.close();
 	return i;
 }
 
+void ProyectMethods::Delete_Airport(const char *nom) {
+	ifstream fileA("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt", ios::in);
+	ofstream fileB("C:\\Users\\Mario Flores JR\\Desktop\\AeropuertosTMP.txt");
+
+	string buffer;
+	string name;
+	size_t n;
+
+	if (!fileA) { return; }
+
+	while (getline(fileA,buffer))
+	{
+		n = buffer.find(";");
+		name = buffer.substr(0, n);
+
+		if (name!=nom)
+		{
+			fileB << buffer << "\n";
+		}
+
+	}
+	fileA.close(); fileB.close();
+
+	remove("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
+	rename("C:\\Users\\Mario Flores JR\\Desktop\\AeropuertosTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
+
+
+}
 //int  ProyectMethods::Display_Airports() {
 //
 //}

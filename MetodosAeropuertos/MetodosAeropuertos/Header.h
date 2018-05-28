@@ -7,7 +7,7 @@ public:
 	void Create_Airport(const char *,double,double);
 	void Read_Airport(char*,int);
 	int Lenght_Arch();
-	
+	void Delete_Airport(const char *);
 	
 
 };

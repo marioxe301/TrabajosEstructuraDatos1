@@ -13,6 +13,7 @@ int main() {
 
 	cout << ab << endl;
 	
+	////pm.Delete_Airport("TGS");
 
 	
 	/*cout << pm.Read_Airport(1)<<endl;*/
