@@ -77,6 +77,36 @@ void ProyectMethods::Delete_Airport(const char *nom) {
 
 
 }
+
+void ProyectMethods::Update_Airport(const char *name, const char *Newname, double lat, double lon) {
+	ifstream fileA("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt", ios::in);
+	ofstream fileB("C:\\Users\\Mario Flores JR\\Desktop\\AeropuertosTMP.txt");
+
+	string buffer;
+	string nameA;
+	size_t n;
+
+	if (!fileA) { return; }
+
+	while (getline(fileA, buffer))
+	{
+		n = buffer.find(";");
+		nameA = buffer.substr(0, n);
+
+		if (nameA != name)
+		{
+			fileB << buffer << "\n";
+		}
+		else {
+			fileB << Newname << ";" << lat << ";" << lon << "\n";
+		}
+
+	}
+	fileA.close(); fileB.close();
+
+	remove("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
+	rename("C:\\Users\\Mario Flores JR\\Desktop\\AeropuertosTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
+}
 //int  ProyectMethods::Display_Airports() {
 //
 //}

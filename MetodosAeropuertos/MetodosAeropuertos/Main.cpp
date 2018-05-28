@@ -14,7 +14,7 @@ int main() {
 	cout << ab << endl;
 	
 	////pm.Delete_Airport("TGS");
-
+	/*pm.Update_Airport("BLZ", "BLE", 15.00, 15.00);*/
 	
 	/*cout << pm.Read_Airport(1)<<endl;*/
 	//pm.Create_Airport(m, 23, 45);
