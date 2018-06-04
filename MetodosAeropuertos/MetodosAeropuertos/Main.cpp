@@ -7,12 +7,14 @@ using namespace std;
 int main() {
 	ProyectMethods pm;
 	string a = "hola";
-	char *ab = new char[300];
+	/*char *ab = new char[300];
 
 	pm.Read_Airport(ab, 1);
 
-	cout << ab << endl;
+	cout << ab << endl;*/
 	
+	cout << pm.Exist_Airport("B");
+
 	////pm.Delete_Airport("TGS");
 	/*pm.Update_Airport("BLZ", "BLE", 15.00, 15.00);*/
 	

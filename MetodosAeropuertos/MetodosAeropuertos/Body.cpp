@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -107,6 +108,23 @@ void ProyectMethods::Update_Airport(const char *name, const char *Newname, doubl
 	remove("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
 	rename("C:\\Users\\Mario Flores JR\\Desktop\\AeropuertosTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
 }
+
+bool ProyectMethods::Exist_Airport(const char * name) {
+	ifstream fileA("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt", ios::in);
+	if (!fileA) { return false ; }
+
+	string line, tmp;
+
+	while (fileA >> line) {
+		stringstream st(line);
+		
+		getline(st, tmp, ';');
+
+		if (tmp == name) { return true; }
+	}
+	return false;
+}
+
 //int  ProyectMethods::Display_Airports() {
 //
 //}

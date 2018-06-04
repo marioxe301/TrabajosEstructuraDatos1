@@ -9,5 +9,5 @@ public:
 	int Lenght_Arch();
 	void Delete_Airport(const char *);
 	void Update_Airport(const char*, const char*, double, double);
-
+	bool Exist_Airport(const char *);
 };
