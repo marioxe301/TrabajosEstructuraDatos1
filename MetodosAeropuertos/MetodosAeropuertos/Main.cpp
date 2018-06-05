@@ -13,7 +13,17 @@ int main() {
 
 	cout << ab << endl;*/
 	
-	cout << pm.Exist_Airport("B");
+	/*cout << pm.Exist_Airport("B");
+
+	cout << pm.Lenght_R()<<"\n";
+
+	cout<< pm.Create_Route("BEL", "MXC", 2190)<<"\n";
+	cout << pm.Create_Route("BEL", "LPR", 3012); "\n";
+
+    cout<<pm.Lenght_R();*/
+
+	//cout << pm.Create_Route("BEL", "MXC", 2190) << "\n";
+
 
 	////pm.Delete_Airport("TGS");
 	/*pm.Update_Airport("BLZ", "BLE", 15.00, 15.00);*/
@@ -32,5 +42,12 @@ int main() {
 
 	cout << nombre << "\t" << nm;
 	*/
+
+	pm.Update_Route("QDS", "TOP", "PTO", 2345);
+
+	/*char *p=new char[200];
+	pm.Read_Route(p, 1);*/
+
+	
 	system("pause");
 }

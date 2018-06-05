@@ -10,4 +10,10 @@ public:
 	void Delete_Airport(const char *);
 	void Update_Airport(const char*, const char*, double, double);
 	bool Exist_Airport(const char *);
+
+	int Create_Route(const char *, const char *, double);
+	void Read_Route(char *, int);
+	int Lenght_R();
+	void Delete_Route(const char *,const char*);
+	void Update_Route(const char*, const char *, const char *, double);
 };
