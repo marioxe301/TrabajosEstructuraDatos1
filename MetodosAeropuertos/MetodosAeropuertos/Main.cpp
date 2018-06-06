@@ -43,11 +43,26 @@ int main() {
 	cout << nombre << "\t" << nm;
 	*/
 
-	pm.Update_Route("QDS", "TOP", "PTO", 2345);
+	//pm.Update_Route("QDS", "TOP", "PTO", 2345);
 
 	/*char *p=new char[200];
 	pm.Read_Route(p, 1);*/
 
-	
+	//bool f = pm.Exist_Airport("QDS");
+	//string b = "HOLA;ERT;456";
+	//size_t c;
+
+	//string e;
+
+ //	c = b.find(";");
+
+	////cout << b.substr(0, c)<<"\n";
+
+	//e = b.substr(c, b.length());
+	//
+	//cout << b.substr(0,c) + e;
+/*
+	pm.Update_IDroute("YLT", "TYL");*/
+	//pm.Update_Airport("BEL", "LEB", 23.56, -12.45);
 	system("pause");
 }

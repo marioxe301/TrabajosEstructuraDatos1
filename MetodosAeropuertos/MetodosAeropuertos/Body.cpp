@@ -103,6 +103,8 @@ void ProyectMethods::Update_Airport(const char *name, const char *Newname, doubl
 		}
 
 	}
+	Update_IDroute(name, Newname);
+
 	fileA.close(); fileB.close();
 
 	remove("C:\\Users\\Mario Flores JR\\Desktop\\Aeropuertos.txt");
@@ -259,6 +261,40 @@ int ProyectMethods::Lenght_R() {
 	return i;
 }
 
+void ProyectMethods::Update_IDroute(const char *id,const char*nid) {
+	ifstream ArchivoR("C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt", ios::in);
+	ofstream fileB("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt");
+
+	if (!ArchivoR) { return; }
+
+	string ID;
+	string line;
+	size_t a;
+	string subline;
+
+	while (getline(ArchivoR, line)) {
+
+		a = line.find(";");
+		ID = line.substr(0, a);
+
+		subline = line.substr(a, line.length());
+
+		if (id != ID) {
+			fileB << line<<"\n";
+		}
+		else {
+			fileB << nid + subline << "\n";
+		}
+		
+
+	}
+	fileB.close(); ArchivoR.close();
+
+	remove("C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
+	rename("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
+
+
+}
 //int  ProyectMethods::Display_Airports() {
 //
 //}
