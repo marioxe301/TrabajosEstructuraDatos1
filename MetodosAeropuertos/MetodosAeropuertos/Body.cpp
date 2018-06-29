@@ -59,6 +59,7 @@ void ProyectMethods::Delete_Airport(const char *nom) {
 	size_t n;
 
 	if (!fileA) { return; }
+	Delete_allIDroutes(nom);
 
 	while (getline(fileA,buffer))
 	{
@@ -89,6 +90,8 @@ void ProyectMethods::Update_Airport(const char *name, const char *Newname, doubl
 
 	if (!fileA) { return; }
 
+	Update_IDroute(name, Newname);
+
 	while (getline(fileA, buffer))
 	{
 		n = buffer.find(";");
@@ -103,7 +106,7 @@ void ProyectMethods::Update_Airport(const char *name, const char *Newname, doubl
 		}
 
 	}
-	Update_IDroute(name, Newname);
+	
 
 	fileA.close(); fileB.close();
 
@@ -271,20 +274,60 @@ void ProyectMethods::Update_IDroute(const char *id,const char*nid) {
 	string line;
 	size_t a;
 	string subline;
+	if (Exist_Airport(id)) {
+		while (getline(ArchivoR, line)) {
 
+			a = line.find(";");
+			ID = line.substr(0, a);
+
+			subline = line.substr(a, line.length());
+
+			if (id != ID) {
+				fileB << line << "\n";
+			}
+			else {
+				fileB << nid + subline << "\n";
+			}
+
+
+		}
+
+	}
+	else
+	{
+		fileB.close(); ArchivoR.close();
+		remove("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt");
+		return;
+	}
+
+	fileB.close(); ArchivoR.close();
+
+	remove("C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
+	rename("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
+
+
+}
+
+void ProyectMethods::Delete_allIDroutes(const char *id) {
+	ifstream ArchivoR("C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt", ios::in);
+	ofstream fileB("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt");
+
+	if (!ArchivoR) { return; }
+
+	string ID;
+	string line;
+	size_t a;
 	while (getline(ArchivoR, line)) {
 
 		a = line.find(";");
 		ID = line.substr(0, a);
 
-		subline = line.substr(a, line.length());
+		
 
 		if (id != ID) {
-			fileB << line<<"\n";
+			fileB << line << "\n";
 		}
-		else {
-			fileB << nid + subline << "\n";
-		}
+		
 		
 
 	}
@@ -292,7 +335,6 @@ void ProyectMethods::Update_IDroute(const char *id,const char*nid) {
 
 	remove("C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
 	rename("C:\\Users\\Mario Flores JR\\Desktop\\RutasTMP.txt", "C:\\Users\\Mario Flores JR\\Desktop\\Rutas.txt");
-
 
 }
 //int  ProyectMethods::Display_Airports() {

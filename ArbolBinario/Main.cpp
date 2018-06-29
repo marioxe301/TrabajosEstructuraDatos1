@@ -95,10 +95,10 @@ int Nivel(ABB arbol) {
 		dr = Nivel(arbol->der);
 
 		if (iz < dr) {
-			return dr + 1;
+			return dr;
 		}
 		else {
-			return iz + 1;
+			return iz;
 		}
 	}
 }

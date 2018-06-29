@@ -17,4 +17,5 @@ public:
 	void Delete_Route(const char *,const char*);
 	void Update_Route(const char*, const char *, const char *, double);
 	void Update_IDroute(const char *,const char *);
+	void Delete_allIDroutes(const char *);
 };

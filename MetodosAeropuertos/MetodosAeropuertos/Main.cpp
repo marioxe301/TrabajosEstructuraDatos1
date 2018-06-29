@@ -63,6 +63,8 @@ int main() {
 	//cout << b.substr(0,c) + e;
 /*
 	pm.Update_IDroute("YLT", "TYL");*/
-	//pm.Update_Airport("BEL", "LEB", 23.56, -12.45);
+	//pm.Update_IDroute("YLT", "TYL");
+	//pm.Update_Airport("TYL", "YLT", -12.43, 10.45);
+	//pm.Delete_Airport("TYL");
 	system("pause");
 }
