@@ -1,1 +1,7 @@
-﻿
+﻿  Body.cpp
+c:\users\mario flores jr\documents\trabajosestructuradatos1\trabajosestructuradatos1\metodosaeropuertos\metodosaeropuertos\body.cpp(473): warning C4018: '<': no coinciden signed/unsigned
+c:\users\mario flores jr\documents\trabajosestructuradatos1\trabajosestructuradatos1\metodosaeropuertos\metodosaeropuertos\body.cpp(474): warning C4018: '<': no coinciden signed/unsigned
+c:\users\mario flores jr\documents\trabajosestructuradatos1\trabajosestructuradatos1\metodosaeropuertos\metodosaeropuertos\body.cpp(483): warning C4018: '<': no coinciden signed/unsigned
+c:\users\mario flores jr\documents\trabajosestructuradatos1\trabajosestructuradatos1\metodosaeropuertos\metodosaeropuertos\body.cpp(490): warning C4018: '<': no coinciden signed/unsigned
+c:\users\mario flores jr\documents\trabajosestructuradatos1\trabajosestructuradatos1\metodosaeropuertos\metodosaeropuertos\body.cpp(495): warning C4715: 'ProyectMethods::weight': no todas las rutas de acceso de control devuelven un valor
+  MetodosAeropuertos.vcxproj -> C:\Users\Mario Flores JR\Documents\TrabajosEstructuraDatos1\TrabajosEstructuraDatos1\MetodosAeropuertos\MetodosAeropuertos\Debug\MetodosAeropuertos.exe

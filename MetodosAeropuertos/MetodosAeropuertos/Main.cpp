@@ -7,6 +7,8 @@ using namespace std;
 int main() {
 	ProyectMethods pm;
 	string a = "hola";
+
+	char * ab = new char[300];
 	/*char *ab = new char[300];
 
 	pm.Read_Airport(ab, 1);
@@ -47,24 +49,19 @@ int main() {
 
 	/*char *p=new char[200];
 	pm.Read_Route(p, 1);*/
+	//cout<< pm.getLat("LEB")<<"  "<<pm.getLng("LEB");
+	//pm.getID(ab, "CAP");
 
-	//bool f = pm.Exist_Airport("QDS");
-	//string b = "HOLA;ERT;456";
-	//size_t c;
+	//pm.Update_IDroute("PML", "LMP");
 
-	//string e;
+	//pm.createRutasID("CAP", "TOP"); 
+	/*pm.readRutasID(ab, 1);*/
+	//cout << pm.Lenght_IDrutas();
 
- //	c = b.find(";");
-
-	////cout << b.substr(0, c)<<"\n";
-
-	//e = b.substr(c, b.length());
-	//
-	//cout << b.substr(0,c) + e;
-/*
-	pm.Update_IDroute("YLT", "TYL");*/
-	//pm.Update_IDroute("YLT", "TYL");
-	//pm.Update_Airport("TYL", "YLT", -12.43, 10.45);
-	//pm.Delete_Airport("TYL");
+	//cout << pm.getDist("CAP", "TOP");
+	//cout << pm.getLat("LMP");
+	//pm.getID(ab, "LAX");
+	/*pm.Delete_Airport("LMP");
+	pm.Delete_allIDroutes("LMP");*/
 	system("pause");
 }
